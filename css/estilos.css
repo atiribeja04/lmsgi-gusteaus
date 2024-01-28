@@ -10,15 +10,23 @@ margin: 0px;
 
 div.encabezado {
     background-image: url('../imgs/guesteaus.png');
-    background-size: contain;
-    background-repeat:  no-repeat;
+    background-size: cover; /* Que la foto cubra nuestro encabezado, a pesar del tamaño */
+    background-repeat:  no-repeat; /* Para que la foto no se repita debido al tamaño */
     background-position: center;
     color: #5a3e36;
-    text-decoration-line: underline;
+    text-decoration-line: underline; /* Importante el text-decoration para dar estilo a nuestro texto directamente por CSS */
     font-family: 'Georgia', serif;
     font-size: 36px;
     text-align: center;
-    line-height: 20;
+    line-height: 10;
+    position: relative;
+}
+
+.logo {
+    position: absolute;
+    left: 0;
+    top: 0;
+    max-width: 100px;
 }
 
 div.menu ul li a {
@@ -41,19 +49,91 @@ div.sidebar {
 }
 
 div.pie {
-    background-color: #5a3e36;
+    background-color: #a77e58;
     color: #ecdcc6; 
     font-family: 'Helvetica', sans-serif;
     text-align: center;
-    padding: 10px;
+    padding: 10px; /* PAra que el texto no se quede tan pegado al margen de arriba*/
+    margin-top: 0; /* Para quitar la separación con el elemento de arriba y no dejar espacios raros */
 }
 
 div.pie a {
     color: #ecdcc6; 
-    text-decoration: none;
     margin: 0 10px;
 }
 
 div.copyright {
-    margin-top: 10px; 
+    margin-top: 10px; /* Separar un poco el copyright del footer */
+}
+
+div.menu {
+    background-color: #a77e58;
+}
+
+div.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+div.menu ul li {
+    margin-right: 20px;
+}
+
+div.menu ul li a {
+    color: #ffffff;
+    font-family: 'Helvetica', sans-serif;
+    font-size: 18px;
+}
+
+div.menu ul li a:hover {
+    color: #5a3e36;
+    background-color: #875f45;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #fff8f0;
+    border: 1px solid #a77e58;
+    border-radius: 5px; /* Redondear */
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+/* IMPORTANTE PROFUNDIZAR: Esta parte de abajo sirve para seleccionar los elementos a los que les queremos dar el estilo a continuación, muy útil y más profesional!!! */ 
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='number'],
+input[type='date'],
+input[type='time'],
+textarea {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #a77e58;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    background-color: #fff8f0;
+}
+
+input[type='submit'] {
+    background-color: #5a3e36;
+    color: #ffffff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: #a77e58;
 }
